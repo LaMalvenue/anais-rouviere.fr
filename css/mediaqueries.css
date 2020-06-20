@@ -1,0 +1,183 @@
+/* ************** Media Queries ************** */
+@media all and (max-width:319px) {
+    body {
+        font-size: 1rem;
+        padding: 2px;
+    }
+    .main {
+        height:90vh;
+        margin-top: 0;
+        overflow: auto;
+    }
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+    .websites {
+        height: 2.7rem;
+        width:100%;
+    }
+    .website {
+        font-size: 1.1rem;
+    }
+    .website.left {
+        font-size: 1.5rem;
+        bottom:1.4rem;
+    }
+    .website.right {
+        bottom:0;
+        right:0;
+    }
+    #position {
+        display:none;
+    }
+}
+@media all and (min-width:320px) {
+    body {
+        font-size: 1.1rem;
+        padding: 2px;
+    }
+    .main {
+        height:90vh;
+        margin-top: 0;
+        overflow: auto;
+    }
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+    .websites {
+        height: 2.5rem;
+        width:95%;
+    }
+    .website {
+        font-size: 1.3rem;
+    }
+    .website.left {
+        bottom:0;
+    }
+    .website.right {
+        bottom:0;
+        right:0;
+    }
+    #position {
+        display:none;
+    }
+}
+@media all and (min-width:395px) {
+    body {
+        font-size: 1.3rem;
+        padding: 2px;
+    }
+    .main {
+        height:90vh;
+        margin-top: 0;
+        overflow: auto;
+    }
+    .title {
+        font-size: 2.95rem;
+        margin-bottom: 0;
+    }
+    .websites {
+        height: 28px;
+    }
+    .website {
+        font-size: 1.6rem;
+        bottom:2px;
+    }
+    #position {
+        display:none;
+    }
+}
+@media all and (min-width:768px) {
+    body {
+        font-size: 2rem;
+        padding: 2px;
+    }
+    .main {
+        height:90vh;
+        margin-top: 0;
+        overflow: auto;
+    }
+    .title {
+        font-size: 3.1rem;
+        margin-bottom: 0;
+    }
+    .websites {
+        height: 3rem;
+        width:97.5%;
+    }
+    .website {
+        font-size: 2.6rem;
+        bottom:0.1rem;
+    }
+    #position {
+        display:none;
+    }
+}
+@media all and (min-width:992px) {
+    body {
+        font-size: 2.7rem;
+        padding: 6px;
+    }
+    .main {
+        height:90vh;
+        margin-top: 0;
+        overflow: auto;
+    }
+    .title {
+        font-size: 4.5rem;
+        margin-bottom: 0;
+    }
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+    .websites {
+        height: 3.8rem;
+    }
+    .website {
+        font-size: 3.6rem;
+        bottom:0.2rem;
+    }
+}
+@media all and (min-width:1200px) {
+    body {
+        font-size: 2.7rem;
+        height: 97.5vh;
+        padding: 15px;
+    }
+    .main {
+        margin-top: 50px;
+    }
+    .title {
+        font-size: 65px;
+        margin-bottom: 0;
+    }
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
+    .websites {
+        position: fixed;
+        bottom:0;
+        height: 65px;
+    }
+    .website {
+        position: absolute;
+        font-size: 65px;
+        margin:0;
+    }
+    .website.right {
+        right:0;
+    }
+    .website.left {
+        left:0;
+    }
+    #position {
+        display:block;
+        position:absolute;
+        top:0; left:0;
+        font-size: 1rem;
+    }
+}

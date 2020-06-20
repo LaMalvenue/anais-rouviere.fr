@@ -1,0 +1,13 @@
+:root {
+    /* Theme variables */
+    --background-color-light : white;
+    --background-color-dark : black;
+    --text-color-light :white ;
+    --text-color-dark : black;
+    --color-emphasis : #ff2600;
+    --color-borders: white;
+
+    /* font family variables. */
+    --paragraph-font: 'Inconsolata',Times, Helvetica, Arial, serif;
+    --title-font : 'Inconsolata', Consolas, Times, monospace;
+}
