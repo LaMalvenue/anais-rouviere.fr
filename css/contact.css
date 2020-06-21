@@ -1,15 +1,13 @@
+
 body {
-    background-color: black;
-    color:white;
-    font-weight: bold;
-    font-size: 42px;
-    font-family: Times, Helvetica, Arial, serif;
-    padding: 15px;
-        /* On empeche de selectionner */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    background-color: var(--background-color-dark);
+    color : var(--text-color-light);
+    padding: 50px;
+}
+.spoiler-content{
+    display: none;
+    transition: display 0.5s;
+}
+.spoiler-content .visible {
+    display: block;
 }
