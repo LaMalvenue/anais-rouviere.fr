@@ -1,8 +1,23 @@
-
 body {
     background-color: var(--background-color-dark);
     color : var(--text-color-light);
-    padding: 50px;
+    padding: 50px 0;
+    font-size: 1.5rem;
+}
+.logo {
+    position: absolute;
+    top:10px;
+}
+.logo.left {
+    left:10px;
+}
+.logo.right {
+    right:10px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .spoiler-content{
     display: none;
@@ -11,3 +26,100 @@ body {
 .spoiler-content .visible {
     display: block;
 }
+.spoiler a:hover {
+    text-decoration: none;
+}
+.paragraph {
+    font-family: var(--title-font);
+    font-weight: 200;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+button {
+    width: 350px;
+    height: 40px;
+}
+.cv-download {
+    background-color: var(--background-color-light);
+    color: var(--text-color-dark);
+    border-color: var(--background-color-light);
+}
+.cv-download:hover, .cv-download:focus {
+    background-color: var(--background-color-dark);
+    color:var(--color-emphasis);
+    border-color:var(--color-emphasis) ;
+}
+.download-icon {
+    display: inline;
+}
+.download-icon-hover {
+    display: none;
+}
+.title-website {
+    margin: 100px 0;
+    text-align: center;
+}
+/* ****************** LINKS ****************** */
+.links {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.link-left {
+    margin-left: 50px;
+    display: inline;
+    float: left;
+}
+.link-right {
+    margin-right:50px;
+    display: inline;
+    float: right;
+}
+
+/* ****************** MEDIA QUERIES ****************** */
+@media all and (max-width: 767px) {
+    .paragraph {
+        font-size: 50px;
+        font-size: 2.5rem;
+    }
+    .logo.left {
+        left:calc(50% - 154px);
+        top:35px;
+        height:175px;
+    }
+    .logo.right {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1199px) {
+    .paragraph {
+        font-size: 50px;
+        font-size: 2.5rem;
+        margin-top: 220px;
+    }
+    .logo.left {
+        height:200px;
+        left:calc(50% - 176px);
+        top:35px;
+    }
+    .logo.right {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .paragraph {
+        font-size: 50px;
+        font-size: 2.8rem;
+    }
+    .logo.left {
+        height:200px;
+    }
+    .logo.right {
+        display: block;
+        height:200px;
+    }
+}
+

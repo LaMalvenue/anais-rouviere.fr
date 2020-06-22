@@ -38,8 +38,13 @@ body {
 }
 #switch-on:focus{
     border:0;
-    outline: -webkit-focus-ring-color auto 0px;
+    outline: -webkit-focus-ring-color auto 0;
 }
-.highlight {
-    text-decoration: underline overline var(--color-emphasis);
+.link-left {
+    display: inline;
+    float: left;
+}
+.link-right {
+    display: inline;
+    float: right;
 }

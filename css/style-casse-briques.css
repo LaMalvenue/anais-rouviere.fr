@@ -1,9 +1,9 @@
 /* ****************** GENERAL ****************** */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 * {
-    padding: 0; margin: 0; 
+    padding: 0; margin: 0;
     box-sizing: border-box;
-} 
+}
 body {
     background-color: var(--color-emphasis);
     color: black;
@@ -19,16 +19,20 @@ body {
 }
 .link-left {
     margin-left: 50px;
+    display: inline;
+    float: left;
 }
 .link-right {
-  margin-right:50px;
+    margin-right:50px;
+    display: inline;
+    float: right;
 }
 /* ****************** CANVAS ****************** */
-canvas { 
+canvas {
     background: var(--color-emphasis);
     border: 3px solid black;
-    display: block; 
-    margin: auto auto; 
+    display: block;
+    margin: auto auto;
     margin-top:10%;
 }
 #indisponible {
@@ -75,16 +79,8 @@ canvas {
     margin: 50px 120px;
     width:100%;
 }
-#continue-button {
-    padding: 1px 18px;
-    background-color: black;
-    border: 1px solid var(--color-borders);
-    color: white;
+button {
     margin-bottom: 20px;
-}
-#continue-button:hover {
-    background-color: white;
-    color: black;
 }
 /* *************** MEDIA QUERIES *************** */
 @media all and (max-width:240px){
@@ -94,7 +90,6 @@ canvas {
         text-align: center;
     }
 }
-
 @media all and (max-width:1024px) {
     canvas{
         display: none;

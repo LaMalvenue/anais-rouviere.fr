@@ -1,7 +1,5 @@
 // ************ SPOILER ************
-
 var elements = document.querySelectorAll('.spoiler');
-
 var createSpoilerButton = function (element) {
 
     var button = document.createElement('button'),
@@ -34,3 +32,17 @@ var createSpoilerButton = function (element) {
 for (var i=0 ; i < elements.length ; i++){
     createSpoilerButton(elements[i]);
 }
+
+// ************ ICON DOWNLOAD ************
+var downloadIcon = document.querySelector('.download-icon');
+var downloadIconHover = document.querySelector('.download-icon-hover');
+var buttonDownload  = document.querySelector('.cv-download');
+
+buttonDownload.addEventListener('mouseover', function () {
+    downloadIcon.style.display = 'none';
+    downloadIconHover.style.display = "inline";
+});
+buttonDownload.addEventListener('mouseout', function () {
+    downloadIcon.style.display = 'inline';
+    downloadIconHover.style.display = "none";
+});
