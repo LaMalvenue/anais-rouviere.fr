@@ -1,15 +1,128 @@
 body {
-    background-color: black;
-    color:white;
-    font-weight: bold;
-    font-size: 42px;
-    font-family: Times, Helvetica, Arial, serif;
-    padding: 15px;
-        /* On empeche de selectionner */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+    background-color: var(--background-color-dark);
+    color : var(--text-color-dark);
+    font-size: 1.5rem;
+}
+.contact {
+    background-color: var(--color-emphasis);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spoiler-content{
+    display: none;
+    transition: display 0.5s;
+}
+.spoiler-content .visible {
+    display: block;
+}
+.spoiler a:hover {
+    text-decoration: none;
+}
+.paragraph {
+    font-family: var(--title-font);
+    color: var(--text-color-dark);
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+button {
+    width: 350px;
+    height: 40px;
+    background-color: var(--background-color-dark);
+    border-color:var(--color-emphasis) ;
+}
+.cv-download {
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+}
+.cv-download:hover, .cv-download:focus {
+    background-color: var(--background-color-dark);
+    color:var(--color-emphasis);
+    border-color:var(--color-emphasis) ;
+}
+.download-icon {
+    display: inline;
+}
+.download-icon-hover {
+    display: none;
+}
+.title-website {
+    text-decoration: underline overline var(--text-color-light);
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+}
+/* ****************** LINKS ****************** */
+.links {
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.link-left {
+    margin-left: 50px;
+    display: inline;
+    float: left;
+    color: var(--text-color-light);
+}
+.link-right {
+    margin-right:50px;
+    display: inline;
+    float: right;
+}
+@media all and (max-width: 576px) {
+    .logo-contact {
+        margin: 10px 0;
+        height: 200px;
+    }
+    .contact {
+        height: auto;
+        padding: 50px 0;
+    }
+    .links {
+        margin: 10px 0;
+        color: var(--text-color-light);
+        position: static;
+        text-align: center;
+    }
+    .link-left {
+        float: none;
+        margin-left: 0;
+        display: block;
+    }
+    .link-right {
+        float: none;
+        margin-right: 0;
+        display: block;
+    }
+}
+@media all and (max-width: 991px) and (min-width: 577px){
+    .logo-contact {
+        height: 300px;
+    }
+    .contact {
+        height: auto;
+        padding: 100px 0;
+    }
+    .links {
+        margin: 10px 0;
+        color: var(--text-color-light);
+        position: static;
+        text-align: center;
+    }
+    .link-left {
+        margin-left: 0;
+        display: block;
+    }
+    .link-right {
+        margin-right: 0;
+        display: block;
+    }
 }
