@@ -37,8 +37,6 @@ canvas {
 }
 #indisponible {
     display: none;
-    position: absolute;
-    top:0;left: 0;
 }
 /* *************** NOTIFICATIONS *************** */
 /* *************** GAME OVER *************** */
@@ -90,6 +88,21 @@ button {
         text-align: center;
     }
 }
+@media all and (max-width: 576px) {
+    .links {
+        text-align: center;
+    }
+    .link-left {
+        float: none;
+        margin-left: 0;
+        display: block;
+    }
+    .link-right {
+        float: none;
+        margin-right: 0;
+        display: block;
+    }
+}
 @media all and (max-width:1024px) {
     canvas{
         display: none;
@@ -106,17 +119,19 @@ button {
         height: 100%;
     }
     #indisponible {
-        height: 100%;
-        width: 100%;
-        display: table;
         background-color: var(--color-emphasis);
+        height: 90vh;
+        width: 100%;
+        display: flex;
     }
     .mobile {
-        display: table-cell;
+        display: flex;
         height: 100%;
-        vertical-align: middle;
     }
     .mobile p{
+        display: flex;
         text-align:center;
+        justify-content: center;
+        align-items: center;
     }
 }

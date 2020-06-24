@@ -1,0 +1,229 @@
+/* *********************** GENERAL *********************** */
+html {
+    position: relative;
+}
+body {
+    background: linear-gradient(180deg, var(--background-color-dark) 100vh, var(--color-emphasis) 100vh);
+    height: 200vh;
+    overflow-x: hidden;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+header {
+    height: 100vh;
+    z-index: 999;
+}
+footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 50px;
+    padding: 18px 0;
+    width:100%;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+/* *********************** TOOLBAR & LOGO *********************** */
+#logo-gallery {
+    position: fixed;
+    top:0; left: 0;
+    height: 100vh;
+    z-index: 9999;
+}
+/* *********************** FRAME & HIDDEN TEXT *********************** */
+.frame {
+    position: relative;
+    padding-top: 100vh;
+    margin: auto;
+    width:1024px;
+}
+.hidden-text {
+    position: absolute;
+    top: 320px;
+    left: calc(50% - 260px);
+    text-align: center;
+    font-size: 1.1rem;
+}
+button {
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    font-family: var(--paragraph-font);
+}
+
+/* *********************** MINIATURES POSITIONS *********************** */
+.draggable {
+    position: absolute;
+    touch-action: none;
+    user-select: none;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    z-index: 0;
+}
+#drag-1 {
+    top:-20px; left: 280px;
+    z-index: 1;
+}
+#drag-1 img {
+    width: 200px;
+}
+#drag-2 {
+    top:0; left: -130px;
+    transform: rotate(-8deg);
+    z-index: 6;
+}
+#drag-3 {
+    top:470px; left: 500px;
+    z-index: 9;
+    transform: rotate(-12deg);
+}
+#drag-3 img {
+    width: 200px;
+}
+#drag-4 {
+    top:300px; left: 750px;
+    transform: rotate(-8deg);
+}
+#drag-4 img {
+    width: 320px;
+}
+#drag-5 {
+    top:470px; left: -160px;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+#drag-5 img {
+    width: 250px;
+}
+#drag-6 {
+    top:580px; left: 920px;
+    transform: rotate(-2deg);
+    z-index: 1;
+}
+#drag-6 img {
+    width: 170px;
+}
+#drag-7 {
+    top:168px; left: 180px;
+    z-index: 2;
+    transform: rotate(7deg);
+}
+#drag-7 img {
+    width: 220px;
+}
+#drag-8 {
+    top:430px; right: -200px;
+    transform: rotate(5deg);
+}
+#drag-8 img {
+    width: 250px;
+}
+#drag-9 {
+    top:0; right: -130px;
+    transform: rotate(-3deg);
+    z-index: 5;
+}
+#drag-9 img {
+    width: 200px;
+}
+#drag-10 {
+    top:520px; left: 150px;
+    transform: rotate(-3deg);
+    z-index: 0;
+}
+#drag-10 img {
+    width: 250px;
+}
+#drag-11 {
+    top:360px; left: 220px;
+    transform: rotate(4deg);
+    z-index: 10;
+}
+#drag-11 img {
+    width: 230px;
+}
+#drag-12 {
+    top:580px; left: 350px;
+    transform: rotate(8deg);
+    z-index: 8;
+}
+#drag-12 img {
+    width: 230px;
+}
+#drag-13 {
+    top:80px; left: 750px;
+    transform: rotate(-3deg);
+}
+#drag-13 img {
+    width: 200px;
+}
+#drag-14 {
+    top:240px; left: 15px;
+    transform: rotate(-3deg);
+    z-index: 1;
+}
+#drag-14 img {
+    width: 200px;
+}
+#drag-15 {
+    top:250px; left: -200px;
+    transform: rotate(3deg);
+    z-index: 7;
+}
+#drag-15 img {
+    width: 200px;
+}
+#drag-16 {
+    top:250px; left: 50px;
+    z-index: 0;
+}
+#drag-16 img {
+    height: 250px;
+}
+#drag-17 {
+    top:260px; left: 450px;
+    transform: rotate(-6deg);
+}
+#drag-17 img {
+    width: 240px;
+}
+#drag-18 {
+    top:600px; left: 50px;
+    transform: rotate(2deg);
+}
+#drag-18 img {
+    width: 170px;
+}
+#drag-19 {
+    top:60px; left: 740px;
+    transform: rotate(6deg);
+    z-index: 4;
+}
+#drag-19 img {
+    width: 230px;
+}
+#drag-20 {
+    top:530px; left: 700px;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+#drag-20 img {
+    width: 250px;
+}
+#drag-21 {
+    top:225px; left: 390px;
+    z-index: 3;
+}
+#drag-21 img {
+    width: 370px;
+}
+#drag-22 {
+    top:70px; left: 445px;
+    transform: rotate(4deg);
+    z-index: 0;
+}
+#drag-22 img {
+    width: 230px;
+}

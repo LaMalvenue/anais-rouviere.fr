@@ -27,6 +27,7 @@ button {
 button:hover, button:focus {
     background-color: white;
     color: black;
+    transition: background-color 0.3s;
 }
 button:focus{
     border:0;
@@ -55,6 +56,9 @@ main .paragraph {
     justify-content: center;
     padding: 0 35px;
 }
+.presentation-text {
+    margin: 10px 0;
+}
 /* ****************** LINKS ****************** */
 a {
     color:inherit;
@@ -65,8 +69,13 @@ a:hover {
 .links {
     display: block;
 }
-
 /* ****************** MEDIA QUERIES ****************** */
+@media all and (max-width: 576px) {
+    main {
+        font-size: 19px;
+        font-size: 1.2rem;
+    }
+}
 @media all and (max-width: 992px) {
     #name {
         font-size: 65px;
@@ -87,8 +96,8 @@ a:hover {
         font-size: 3rem;
     }
     main {
-        font-size: 19px;
-        font-size: 1.2rem;
+        font-size: 23px;
+        font-size: 1.4rem;
     }
     .links {
         font-size: 37px;

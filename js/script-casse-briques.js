@@ -180,7 +180,7 @@ function playGame() {
     {
         successNotify.innerHTML = "<div class='successContent'>" +
             "<p>Bravo !<br>Vous avez accès au contenu secret</p>" +
-            "<a href='https://anais-rouviere.fr/hidden-content.html'><button id=\"continue-button\">Continuer</button></a>" +
+            "<a href='hidden-content.html'><button id=\"continue-button\">Continuer</button></a>" +
             "</div>";
         successNotify.style.display = 'flex';
         return;

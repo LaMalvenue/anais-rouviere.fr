@@ -1,3 +1,4 @@
+/* ****************** GENERAL/DIV ****************** */
 body {
     background-color: var(--background-color-dark);
     color : var(--text-color-dark);
@@ -16,6 +17,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* ****************** SPOILER ****************** */
 .spoiler-content{
     display: none;
     transition: display 0.5s;
@@ -26,6 +28,7 @@ body {
 .spoiler a:hover {
     text-decoration: none;
 }
+/* ****************** CONTENT ****************** */
 .paragraph {
     font-family: var(--title-font);
     color: var(--text-color-dark);
@@ -59,7 +62,12 @@ button {
     margin-bottom: 0;
     text-align: center;
 }
-/* ****************** LINKS ****************** */
+.title-website:hover {
+    text-decoration: underline overline var(--text-color-dark);
+    color: var(--text-color-light);
+    transition: color 0.3s;
+}
+/* ****************** NAVIGATION ****************** */
 .links {
     position: absolute;
     bottom:0;
@@ -77,13 +85,14 @@ button {
     display: inline;
     float: right;
 }
+/* ****************** MEDIAQUERIES ****************** */
 @media all and (max-width: 576px) {
     .logo-contact {
         margin: 10px 0;
         height: 200px;
     }
     .contact {
-        height: auto;
+        height: 650px;
         padding: 50px 0;
     }
     .links {
