@@ -129,6 +129,7 @@ button {
         height: 100%;
     }
     .mobile p{
+        font-size: 1.4rem;
         display: flex;
         text-align:center;
         justify-content: center;
