@@ -1,8 +1,8 @@
 // ************ SPOILER ************
-var elements = document.querySelectorAll('.spoiler');
-var createSpoilerButton = function (element) {
+const elements = document.querySelectorAll('.spoiler');
+const createSpoilerButton = function (element) {
 
-    var button = document.createElement('button'),
+    const button = document.createElement('button'),
         span = document.createElement('span');
 
     // Création de la span.spoiler-content
@@ -29,14 +29,14 @@ var createSpoilerButton = function (element) {
     });
 };
 
-for (var i=0 ; i < elements.length ; i++){
+for (let i=0 ; i < elements.length ; i++){
     createSpoilerButton(elements[i]);
 }
 
 // ************ ICON DOWNLOAD ************
-var downloadIcon = document.querySelector('.download-icon');
-var downloadIconHover = document.querySelector('.download-icon-hover');
-var buttonDownload  = document.querySelector('.cv-download');
+const downloadIcon = document.querySelector('.download-icon');
+const downloadIconHover = document.querySelector('.download-icon-hover');
+const buttonDownload  = document.querySelector('.cv-download');
 
 buttonDownload.addEventListener('mouseover', function () {
     downloadIcon.style.display = 'none';

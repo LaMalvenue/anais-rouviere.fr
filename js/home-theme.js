@@ -1,19 +1,19 @@
-var indexMd = document.querySelector('#index-md');
-var indexLg = document.querySelector('#index-lg');
+const indexMd = document.querySelector('#index-md');
+const indexLg = document.querySelector('#index-lg');
 
 function lgDevice() {
-    var clickableArea = document.createElement('div');
+    const clickableArea = document.createElement('div');
     clickableArea.className = "clickable-area";
-    var linkToPresentation = document.createElement('a');
+    const linkToPresentation = document.createElement('a');
     linkToPresentation.href = "presentation.html";
     clickableArea.appendChild(linkToPresentation);
 
-    var videoLg = document.createElement('video');
+    const videoLg = document.createElement('video');
     videoLg.id = "video-background-lg";
     videoLg.setAttribute('autoplay', '');
     videoLg.setAttribute('playsinline', '');
     videoLg.setAttribute('muted', '');
-    var sourceVideo = document.createElement('source');
+    const sourceVideo = document.createElement('source');
     sourceVideo.type ="video/mp4";
     sourceVideo.src = "img/background-lg.mov";
     sourceVideo.alt = "Video de fond";
@@ -25,18 +25,18 @@ function lgDevice() {
     indexLg.appendChild(videoLg);
 }
 function mdDevice(){
-    var clickableAreaSmall = document.createElement('div');
+    const clickableAreaSmall = document.createElement('div');
     clickableAreaSmall.className = "clickable-area-small";
-    var linkToPresentationSmall = document.createElement('a');
+    const linkToPresentationSmall = document.createElement('a');
     linkToPresentationSmall.href = "presentation.html";
     clickableAreaSmall.appendChild(linkToPresentationSmall);
 
-    var videoMd = document.createElement('video');
+    const videoMd = document.createElement('video');
     videoMd.id = "video-background-md";
     videoMd.setAttribute('autoplay', '');
     videoMd.setAttribute('playsinline', '');
     videoMd.setAttribute('muted', '');
-    var sourceVideoMd = document.createElement('source');
+    const sourceVideoMd = document.createElement('source');
     sourceVideoMd.type ="video/mp4";
     sourceVideoMd.src = "img/background-small.mov";
     sourceVideoMd.alt = "Video de fond";

@@ -1,6 +1,6 @@
-var links = document.querySelector('.links');
-var casseBrique = document.getElementById('casse-brique');
-var canvasFrame = document.createElement("canvas");
+const links = document.querySelector('.links');
+const casseBrique = document.getElementById('casse-brique');
+const canvasFrame = document.createElement("canvas");
 canvasFrame.height = 320;
 canvasFrame.width = 480;
 canvasFrame.id = "myCanvas";
@@ -29,38 +29,38 @@ if(window.matchMedia("(min-width:992px)").matches)
 window.addEventListener('resize', onResize, false);
 
 // Settings / Game
-var gameOverNotify = document.getElementById('game-over-notify');
-var successNotify = document.getElementById('success-notify');
-var success = false;
-var score = 0;
-var lives = 3;
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const gameOverNotify = document.getElementById('game-over-notify');
+const successNotify = document.getElementById('success-notify');
+let success = false;
+let score = 0;
+let lives = 3;
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 // La balle
-var ballRadius = 10;     // Rayon de la balle
-var x = canvas.width/2;      // Position initiale X
-var y = canvas.height-30;      // Position initiale Y
-var dx = 2;    // Direction X (nombre de px décalés vers gauche/droite)
-var dy = -2;     // Direction Y (nombre de px décalés vers haut/bas)
+let ballRadius = 10;     // Rayon de la balle
+let x = canvas.width/2;      // Position initiale X
+let y = canvas.height-30;      // Position initiale Y
+let dx = 2;    // Direction X (nombre de px décalés vers gauche/droite)
+let dy = -2;     // Direction Y (nombre de px décalés vers haut/bas)
 // Le paddle
-var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;  // Pour qu'il soit au centre
+let paddleHeight = 10;
+let paddleWidth = 75;
+let paddleX = (canvas.width-paddleWidth)/2;  // Pour qu'il soit au centre
 // Bouger le paddle
-var rightPressed = false;
-var leftPressed = false;
+let rightPressed = false;
+let leftPressed = false;
 // Les briques
-var brickRowCount = 3;
-var brickColumnCount = 5;
-var brickWidth = 75;
-var brickHeight = 20;
-var brickPadding = 10;
-var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
-var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
+const brickRowCount = 3;
+const brickColumnCount = 5;
+const brickWidth = 75;
+const brickHeight = 20;
+const brickPadding = 10;
+const brickOffsetTop = 30;
+const brickOffsetLeft = 30;
+const bricks = [];
+for(let c=0; c<brickColumnCount; c++) {
     bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
+    for(let r=0; r<brickRowCount; r++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
 }
@@ -83,7 +83,7 @@ function keyUpHandler(e) {
 }
 
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
+    let relativeX = e.clientX - canvas.offsetLeft;
     if(relativeX > 0 && relativeX < canvas.width) {
         paddleX = relativeX - paddleWidth/2;
     }
@@ -103,9 +103,9 @@ successNotify.addEventListener("click", function() {
 
 function collisionDetection() {
     success=false;
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
+    for(let c=0; c<brickColumnCount; c++) {
+        for(let r=0; r<brickRowCount; r++) {
+            let b = bricks[c][r];
             if (b.status===1){
                 if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                     dy = -dy;
@@ -151,11 +151,11 @@ function drawThePaddle(){
 }
 
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
+    for(let c=0; c<brickColumnCount; c++) {
+        for(let r=0; r<brickRowCount; r++) {
             if (bricks[c][r].status === 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;     // PosX brique = (nb colones * largeur brique + padding) + offset
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;     // PosY brique = (nb lignes = hauteur brique + padding) + offset
+                let brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;     // PosX brique = (nb colones * largeur brique + padding) + offset
+                let brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;     // PosY brique = (nb lignes = hauteur brique + padding) + offset
                 bricks[c][r].x = brickX;
                 bricks[c][r].y = brickY;
                 ctx.beginPath();

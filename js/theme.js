@@ -1,4 +1,4 @@
-var body = document.querySelector('body'),
+let body = document.querySelector('body'),
 bigLetters = document.getElementsByClassName('bigLetter'),
 a = document.querySelectorAll('a'),
 button = document.getElementById('switch-on'),
@@ -8,11 +8,11 @@ lightTheme=true;
 function setVisibleLight() { //  texte  blanc - fond noir
     body.id = "visible-light";
     button.style.color = "var(--text-color-light)";
-    for (var k=0 ; k<bigLetters.length ; k++)
+    for (let k=0 ; k<bigLetters.length ; k++)
     {
         bigLetters[k].style.color = "var(--text-color-light)";
     }
-    for (var l=0 ; l<a.length ; l++)
+    for (let l=0 ; l<a.length ; l++)
     {
         a[l].className = 'visible-link-light';
     }
@@ -20,11 +20,11 @@ function setVisibleLight() { //  texte  blanc - fond noir
 function setVisibleDark() { //  texte  noir - fond blanc
     body.id = "visible-dark";
     button.style.color = "var(--text-color-dark)";
-    for (var k=0 ; k<bigLetters.length ; k++)
+    for (let k=0 ; k<bigLetters.length ; k++)
     {
         bigLetters[k].style.color = "var(--text-color-dark)";
     }
-    for (var l=0 ; l<a.length ; l++)
+    for (let l=0 ; l<a.length ; l++)
     {
         a[l].className = 'visible-link-dark';
     }
@@ -32,11 +32,11 @@ function setVisibleDark() { //  texte  noir - fond blanc
 function setDarkTheme() {
     body.id = null;
     button.style.color = "var(--text-color-light)";
-    for (var k=0 ; k<bigLetters.length ; k++)
+    for (let k=0 ; k<bigLetters.length ; k++)
     {
         bigLetters[k].style.color = "var(--text-color-light)";
     }
-    for (var l=0 ; l<a.length ; l++)
+    for (let l=0 ; l<a.length ; l++)
     {
         a[l].className = 'dark-theme';
     }
@@ -45,11 +45,11 @@ function setLightTheme() {
     body.className = null;
     body.id = null;
     button.style.color = "var(--text-color-dark)";
-    for (var k=0 ; k<bigLetters.length ; k++)
+    for (let k=0 ; k<bigLetters.length ; k++)
     {
         bigLetters[k].style.color = 'var(--text-color-dark)';
     }
-    for (var l=0 ; l<a.length ; l++)
+    for (let l=0 ; l<a.length ; l++)
     {
         a[l].className = null;
     }
@@ -114,8 +114,8 @@ function clickThemeAction() {
 button.addEventListener('click', switchOnTheLight, true);
 
 // ********** SPANS ACTIONS **********
-for (var i=0; i<bigLetters.length; i++) {
-    var bigLetter = bigLetters[i];
+for (let i=0; i<bigLetters.length; i++) {
+    let bigLetter = bigLetters[i];
     bigLetter.addEventListener('mouseover', mouseoverThemeAction, false);
     bigLetter.addEventListener('mouseout', mouseoutThemeAction, false);
     bigLetter.addEventListener('click', clickThemeAction, false);

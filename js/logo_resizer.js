@@ -1,28 +1,28 @@
 (function () {
 
-var logo = document.getElementById('logo-gallery');
-var header = document.querySelector('header');
+    const logo = document.getElementById('logo-gallery');
+    const header = document.querySelector('header');
 
-    var scrollY = function() {
-        var supportPageOffset = window.pageXOffset !== undefined;
-        var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat"); // Compatibilité
+    const scrollY = function () {
+        const supportPageOffset = window.pageXOffset !== undefined;
+        const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat"); // Compatibilité
         return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
     }
 
     window.resizeLogo = function () {
-        var headerHeight = header.offsetHeight;
+        const headerHeight = header.offsetHeight;
 
         // Fonctions
-        var onScroll = function () {
+        const onScroll = function () {
             if (scrollY() < headerHeight) {
-                if(headerHeight-scrollY()>99){
-                    logo.style.height = (headerHeight-scrollY())+'px';
+                if (headerHeight - scrollY() > 99) {
+                    logo.style.height = (headerHeight - scrollY()) + 'px';
                 }
-            }  else if (scrollY() >= headerHeight) {
+            } else if (scrollY() >= headerHeight) {
                 logo.style.height = '100px';
             }
         }
-        var onResize = function () {
+        const onResize = function () {
             window.reload();
             logo.style.height = "100vh";
             onScroll()

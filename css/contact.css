@@ -41,6 +41,18 @@ button {
     background-color: var(--background-color-dark);
     border-color:var(--color-emphasis) ;
 }
+.link-button {
+    width: 165px;
+}
+.link-button:nth-child(1) {
+    margin-right : 0.3rem;
+}
+.link-button:nth-child(2) {
+    margin-left : 0.3rem;
+}
+.link-button a:hover {
+    text-decoration: none;
+}
 .cv-download {
     background-color: var(--text-color-light);
     color: var(--text-color-dark);
