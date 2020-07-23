@@ -5,6 +5,7 @@ html {
 body {
     background: linear-gradient(180deg, var(--background-color-dark) 100vh, var(--color-emphasis) 100vh);
     height: 200vh;
+    min-height: 1400px;
     overflow-x: hidden;
     margin-top: 150px;
     margin-bottom: 80px;
